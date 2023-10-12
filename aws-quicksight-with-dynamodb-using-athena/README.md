@@ -4,7 +4,15 @@
 AWS QuickSight can't connect to DynamoDB directly for DataSet as DynamoDB is NoSQL database. Here, Athena service can be used to bring SQL capability to query DynamoDB.
 
 ## Athena Configuration Steps
-
+* Step 1 - Create Datasource by selecting DynamoDB.
+![](aws-athena-datasource-dynamodb-creation.jpg)
+* Step 2
+    * Enter Data source name and description. 
+    * **Important** Deploy AthenaDynamoDBConnector Lambda Function by clicking/launching the Create Lambda Function from Data Source creation page. 
+        * Lambda Creation page will show the details. Lambda function name can be given as our need and deploy.
+        * Once deployed, this function needs to be referred in Lambda Function.
+![](aws-athena-lambda-dynamodb-connection.jpg) 
+* Step 3 - Review and Create Data Source.
 
 ## QuickSight Configuration Steps
 
