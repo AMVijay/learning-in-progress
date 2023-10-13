@@ -16,12 +16,14 @@ AWS QuickSight can't connect to DynamoDB directly for DataSet as DynamoDB is NoS
 
 ## QuickSight Configuration Steps
 
+* In QuickSight, navigate to `Dataset > Create DataSet` page. 
+* Here, select Athena as Data Source, and will be getting popup for Athena data source configuration. 
+* If error message `Unable to retrieve Athena workgroups. Wait a few moments and click here to try again.` is displayed, follow below steps to resolve the issue.  
 
-### Problem Statement
+### Athena Permission for QuickSight
 While creating Dataset in AWS QuickSight with Athena, getting error `Unable to retrieve Athena workgroups. Wait a few moments and click here to try again.`. 
-![](aws-quicksight-athena-access-issue.jpg) 
+![](aws-quicksight-athena-access-issue.jpg)
 
-#### Rootcause
 As QuickSight doesn't have permission to access Athena this issue occurs.   
 
 #### Solution
